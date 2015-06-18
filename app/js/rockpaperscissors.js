@@ -22,18 +22,36 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
+   
+
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */;
+    
+    var move;
+    return move || getInput();
+    
 }
+
+
+
+
+
+
 
 function getComputerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+   
+    var move;  
+    return move || randomPlay();
 }
+
+
+
+
+
 
 function getWinner(playerMove,computerMove) {
     var winner;
@@ -44,10 +62,46 @@ function getWinner(playerMove,computerMove) {
     return winner;
 }
 
+ if (playerMove === computerMove)
+ {
+ winner === "tie";
+ 
+ else if (playerMove === "rock" && computerMove === "scissors")
+ {
+ winner === "player";
+ }
+ 
+ else if (playerMove === "paper" && computerMove === "rock")
+ {
+ winner ==="player";
+ }
+
+ else if (playerMove === "scissors" && computerMove === "paper")
+ {
+ winner === "player";
+ 
+ else { winner === "computer";
+ }
+ return winner;
+ }
+
+
+
+
+
+
+
 function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
+    if (playerWins==5)
+    {return playerWins;}
+    else if (computerWins==5)
+    {return computerWins;
+    }
+    
+    
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
     /* YOUR CODE HERE */
     return [playerWins, computerWins];
